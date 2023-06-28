@@ -15,6 +15,7 @@
     --violet-blue: hsla(256, 72%, 46%, 1);
     --persian-blue: hsla(241, 72%, 46%, 0);
     --out-of-100: hsla(224, 30%, 27%, 0.3);
+    --result-out-of-100: hsla(241, 100%, 89%, 0.3);
 }
 
 *,
@@ -46,15 +47,16 @@
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
-    min-width: 100dvw;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 main {
     margin: auto;
+   
 }
 
 .grid-container {
@@ -65,26 +67,49 @@ main {
 
 .avg-score {
     background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
-    color: white;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     border-radius: 16px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 10px 10px 10px;
     
 }
-.average-score {
-    font-size: 4rem;
+.circle {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--pale-blue);
     font-weight: 800;
     background: linear-gradient(var(--violet-blue), var(--persian-blue));
-    border-radius: 100%;
-    width: 25%;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin: 0.5rem;
+}
+
+.your-score {
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 5%;
 }
 
 .score-report {
     margin-left: 15%;
+    color: var(--light-lavender);
+    margin-top: -0.5%;
+    margin-right: 15%;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.great {
+    color: white;
+    font-size: 2rem;
+    margin: 0.5rem;
+    margin-top: -2%;
 }
 .score-breakdown {
     background-color: white;
@@ -92,10 +117,25 @@ main {
     flex-flow: column wrap;
     justify-content: space-between;
     align-self: stretch;
+    border-radius: 10px;
+    box-shadow: 10px 5px 15px var(--pale-blue);
 }
 
 .result {
     text-align: center;
+    color: var(--pale-blue);
+    font-size: 1.125rem;
+}
+
+.summary {
+    font-size: 1.125rem;
+   margin-left: 3rem;
+}
+
+.result-out-of-100 {
+    color: var(--result-out-of-100);
+    display: inline-block;
+    margin-top: -30%;
 }
 
 ul {
@@ -116,6 +156,10 @@ li {
     border-radius: 12px;
     min-width: 18.8125rem;
     
+}
+
+p {
+    font-size: 1.125rem;
 }
 
 
@@ -154,12 +198,13 @@ button {
     border-radius: 12px;
     min-height: 3rem;
     margin: auto;
-    min-width: 18rem;
+    min-width: 16rem;
+    margin-bottom: 5%;
 
 }
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 1.125rem; 
     text-align: center; 
 }
     .attribution a { 

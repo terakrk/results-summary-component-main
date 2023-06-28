@@ -73,5 +73,5 @@ I will continue to learn Flexbox and Grid; I struggle to line things up correctl
 ## Author
 
 - Website - [Sweet Perdition](http://www.sweet-perdition.net)
-- Frontend Mentor - [@terakrk](https://www.frontendmentor.io/profile/terakrk
+- Frontend Mentor - [@terakrk](https://www.frontendmentor.io/profile/terakrk)
 

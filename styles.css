@@ -26,25 +26,33 @@
 
 @font-face {
     font-family: 'Hanken Grotesk';
-    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-variation-settings: "wght" 500;
+    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype-variations');
+    
+   
 }
 
 @font-face {
     font-family: 'Hanken Grotesk';
-    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
-    font-weight: bold;
-    font-variation-settings: "wght" 700;
+    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype-variations'),
+        url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Hanken Grotesk';
-    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
-    font-weight: bolder;
-    font-variation-settings: "wght" 800;
+    src: url('assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
+    font-weight: 900;
+}
 body {
     font-family: 'Hanken Grotesk', sans-serif;
     min-height: 100dvh;
@@ -152,6 +160,7 @@ li {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     margin-bottom: 1rem;
+    margin-right: 2.5rem;
     padding: .5rem;
     border-radius: 12px;
     min-width: 18.8125rem;
@@ -203,10 +212,35 @@ button {
 
 }
 
+button:active,
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
 .attribution { 
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.125rem; 
     text-align: center; 
 }
     .attribution a { 
         color: hsl(228, 45%, 44%); 
+    }
+
+    @media (max-width: 600px) {
+        .grid-container {
+            max-width: 80%;
+            display: flex;
+            flex-flow: column nowrap;
+
+        }
+
+        .avg-score {
+            border-radius: 0px 0px 45px 45px;
+        }
+
+        .score-breakdown {
+            border-radius: 0px 0px 0px 0px;
+            box-shadow: 0px 0px 0px 0px;
+        }
     }
